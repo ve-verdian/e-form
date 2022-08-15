@@ -98,7 +98,7 @@
       </div><!--/row-->
 
     </div><!--/.fluid-container-->
-	<center style="margin-top: -15px;">Versi 1.0 (2021) &copy; <a href="#">Unknown</a>
+	<center style="margin-top: -15px;">Versi 1.0 (2022) &copy; <a href="#">Unknown</a>
 	<!-- <a href="http://nur-akhwan.blogspot.com/">Blog Nur Akhwan</a><br> -->
 	<!-- <span style="color: red">*) Jangan dihilangkan copyright-nya ya, kecuali untuk tugas kuliah... hehe :)</span> -->
 	</center>

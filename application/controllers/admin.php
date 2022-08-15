@@ -174,7 +174,7 @@ class Admin extends CI_Controller {
 				$this->db->query("INSERT INTO t_surat_masuk VALUES (NULL, '$kode', '$no_agenda', '$indek_berkas', '$uraian', '$dari', '$no_surat', '$tgl_surat', NOW(), '$ket', '', '".$this->session->userdata('admin_id')."', '$nomor_hp', '$akses_menu')");
 			}	
 			
-			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan. ".$this->upload->display_errors()."</div>");
+			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan. </div>");
 			redirect('index.php/admin/surat_masuk');
 		} else if ($mau_ke == "act_edt") {
 			if ($this->upload->do_upload('file_surat')) {
@@ -185,7 +185,7 @@ class Admin extends CI_Controller {
 				$this->db->query("UPDATE t_surat_masuk SET kode = '$kode', no_agenda = '$no_agenda', indek_berkas = '$indek_berkas', isi_ringkas = '$uraian', dari = '$dari', no_surat = '$no_surat', tgl_surat = '$tgl_surat', keterangan = '$ket', nomor_hp = '$nomor_hp', akses_menu = '$akses_menu' WHERE id = '$idp'");
 			}	
 			
-			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui. ".$this->upload->display_errors()."</div>");			
+			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui. </div>");			
 			redirect('index.php/admin/surat_masuk');
 		} else {
 			$a['data']		= $this->db->query("SELECT * FROM t_surat_masuk WHERE YEAR(tgl_diterima) = '$ta' ORDER BY id DESC LIMIT $awal, $akhir ")->result();

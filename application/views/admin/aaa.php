@@ -178,7 +178,7 @@
 	  
 	  <div class="span12 well well-sm">
 		<!-- <h4 style="font-weight: bold">ASAMURAT (Aplikasi SederhanA Manajemen sURAT) by <a href="http://nur-akhwan.blogspot.com/" target="_blank">Nur Akhwan</a></a></h4> -->
-		<h6>&copy;  2021. Waktu Eksekusi : {elapsed_time}, Penggunaan Memori : {memory_usage}</h6>
+		<h6>&copy;  2022. Waktu Eksekusi : {elapsed_time}, Penggunaan Memori : {memory_usage}</h6>
 	  </div>
  
     </div>

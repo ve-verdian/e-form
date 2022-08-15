@@ -60,10 +60,10 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	<td colspan="3" style="line-height: 30px"><p align="justify">Maka dengan ini ingin meminta persetujuan oleh Direktur untuk diberikan menu – menu pada
 		SIM – RS yang digunakan untuk menyelesaikan perkerjaan dan tanggung jawab yang diberikan.</p>
 		<span>Diberikan Akses RS Cloud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> 
-		<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-		<label class="form-check-label" for="inlineCheckbox1">Ya</label>
-		<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-		<label class="form-check-label" for="inlineCheckbox2">Tidak</label>
+		<input class="form-check-input" type="checkbox" id="Ya" value="">
+		<label class="form-check-label" for="Ya">Ya</label>
+		<input class="form-check-input" type="checkbox" id="Tidak" value="">
+		<label class="form-check-label" for="Tidak">Tidak</label>
 		<br>
 		<span>Data yang di Akses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
 		<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -75,7 +75,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 		<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
 		<label class="form-check-label" for="inlineCheckbox1">Disamakan</label>
 		<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-		<label class="form-check-label" for="inlineCheckbox2">Berbeda</label>
+		<label class="form-check-label" for="inlineCheckbox2">Berbeda&nbsp;&nbsp;&nbsp;________________</label>
 		<br>
 		IT akan membantu untuk melakukan proses pembuatan user dengan persetujuan Direktur.<br>
 	</td>
