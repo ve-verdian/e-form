@@ -442,7 +442,7 @@ class Admin extends CI_Controller {
 		//if (empty($awal) || $awal == 1) { $awal = 0; } { $awal = $awal; }
 		$akhir	= $per_page;
 		
-		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."admin/manage_admin/p");
+		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."index.php/admin/manage_admin/p");
 		
 		//ambil variabel URL
 		$mau_ke					= $this->uri->segment(3);
