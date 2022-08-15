@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Agu 2022 pada 09.34
+-- Waktu pembuatan: 15 Agu 2022 pada 14.37
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -123,7 +123,16 @@ CREATE TABLE `t_admin` (
 INSERT INTO `t_admin` (`id`, `username`, `password`, `nama`, `nip`, `level`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', '0123456789', 'Super Admin'),
 (2, 'admrajal', '81dc9bdb52d04dc20036dbd8313ed055', 'Mida Matris', '123456', 'Admin'),
-(3, 'admranap', '81dc9bdb52d04dc20036dbd8313ed055', 'Sumarsih', '654321', 'Admin');
+(3, 'admranap', '81dc9bdb52d04dc20036dbd8313ed055', 'Sumarsih', '123456', 'Admin'),
+(4, 'informasi', '81dc9bdb52d04dc20036dbd8313ed055', 'Sri Hardjanti', '123456', 'Admin'),
+(5, 'kamarbayi', '81dc9bdb52d04dc20036dbd8313ed055', 'Minayu', '123456', 'Admin'),
+(6, 'kamarbedah', '81dc9bdb52d04dc20036dbd8313ed055', 'Asih', '123456', 'Admin'),
+(7, 'perawat1', '81dc9bdb52d04dc20036dbd8313ed055', 'Nasti', '123456', 'Admin'),
+(8, 'perawat2', '81dc9bdb52d04dc20036dbd8313ed055', 'Nawang', '123456', 'Admin'),
+(9, 'perawat3', '81dc9bdb52d04dc20036dbd8313ed055', 'Ellys', '123456', 'Admin'),
+(10, 'unitigd', '81dc9bdb52d04dc20036dbd8313ed055', 'Sumiyati', '123456', 'Admin'),
+(11, 'poli', '81dc9bdb52d04dc20036dbd8313ed055', 'Ervina', '123456', 'Admin'),
+(12, 'kamarbersalin', '81dc9bdb52d04dc20036dbd8313ed055', 'Karu', '123456', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -221,8 +230,8 @@ CREATE TABLE `t_surat_masuk` (
 
 INSERT INTO `t_surat_masuk` (`id`, `kode`, `no_agenda`, `indek_berkas`, `isi_ringkas`, `dari`, `no_surat`, `tgl_surat`, `tgl_diterima`, `keterangan`, `file`, `pengolah`, `nomor_hp`, `akses_menu`) VALUES
 (1, 'HM', '0001', 'data', 'Permintaan data kunjungan wisatawan semester 1 tahun 2015', 'Dinas Pariwisata DIY', 'Par/HM.01/100/2015', '2015-05-22', '2015-05-24', '', 'Tes_Upload_file1.docx', 1, '', ''),
-(3, 'Kasir', '0001', 'anggun@gmail.com', 'Staff', 'Anggun', '654321', '2022-08-11', '2022-08-11', 'anggun', '', 2, '0123456789', 'Pendaftaran'),
-(9, 'SIMRS', '0002', 'verdi.2292@gmail.com', 'Staff', 'Verdi Verdian', '100730', '2022-08-15', '2022-08-15', 'verdi', '', 2, '085717857565', 'Full Account');
+(3, 'Kasir', '0001', 'anggun@gmail.com', 'Staff', 'Anggun', '654321', '2022-08-11', '2022-08-11', 'anggun', '', 2, '0123456789', 'Pendaftaran, Pembayaran, Laporan'),
+(10, 'Kasir', '0002', 'elsy@gmail.com', 'Staff', 'Elsy', '654321', '2022-08-15', '2022-08-15', 'elsy', '', 3, '0123456789', 'Pendaftaran, Pembayaran, Laporan');
 
 --
 -- Indexes for dumped tables
@@ -290,7 +299,7 @@ ALTER TABLE `tr_instansi`
 -- AUTO_INCREMENT untuk tabel `t_admin`
 --
 ALTER TABLE `t_admin`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `t_disposisi`
@@ -314,7 +323,7 @@ ALTER TABLE `t_surat_keputusan`
 -- AUTO_INCREMENT untuk tabel `t_surat_masuk`
 --
 ALTER TABLE `t_surat_masuk`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
