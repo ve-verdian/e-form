@@ -38,6 +38,9 @@
 			$no 	= ($this->uri->segment(4) + 1);
 			foreach ($data as $b) {
 		?>
+		<?php  
+				if ($b->pengolah == $this->session->userdata('admin_id')) {
+				?>
 		<tr>
 			<td><?php echo $b->no_agenda;?></td>
 			<td><?php echo $b->dari. "<br><i>".$b->no_surat; ?></td>
@@ -45,11 +48,7 @@
 			<td><?php echo $b->indek_berkas. "<br><i>".$b->keterangan; ?></td>
 			<td><?php echo $b->nomor_hp. "<br><i>" .tgl_jam_sql($b->tgl_surat); ?></td>
 			
-			
 			<td class="ctr">
-				<?php  
-				if ($b->pengolah == $this->session->userdata('admin_id')) {
-				?>
 				<div class="btn-group; justify">
 					<a href="<?php echo base_URL()?>index.php/admin/surat_masuk/edt/<?php echo $b->id?>" class="btn btn-success btn-sm" title="Edit Data"><i class="icon-edit icon-white"> </i> Edt</a>
 					<a href="<?php echo base_URL()?>index.php/admin/surat_masuk/del/<?php echo $b->id?>" class="btn btn-warning btn-sm" title="Hapus Data" onclick="return confirm('Anda Yakin..?')"><i class="icon-trash icon-remove">  </i> Del</a>			
@@ -57,15 +56,8 @@
 					<a href="<?php echo base_URL()?>index.php/admin/disposisi_cetak/<?php echo $b->id?>" class="btn btn-info btn-sm" target="_blank" title="Cetak Disposisi"><i class="icon-print icon-white"> </i> Ctk</a>
 				</div>	
 				<?php 
-				} else {
+				} 
 				?>
-				<div class="btn-group">
-					<a href="<?php echo base_URL()?>index.php/admin/disposisi_cetak/<?php echo $b->id?>" class="btn btn-info btn-sm" target="_blank" title="Cetak Disposisi"><i class="icon-print icon-white"> </i> Ctk</a>
-				</div>	
-				<?php 
-				}
-				?>
-				
 			</td>
 		</tr>
 		<?php 
