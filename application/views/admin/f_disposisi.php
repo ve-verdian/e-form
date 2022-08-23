@@ -4,6 +4,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 
 <html>
 <head>
+<title>Cetak User Baru</title>
 <link rel="shortcut icon" href="<?=base_url('aset/img/rsia_family.jpeg')?>">
 <style type="text/css" media="print">
 	/* table {border: solid 1px #000; border-collapse: collapse; width: 100%} */

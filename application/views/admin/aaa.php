@@ -106,7 +106,7 @@
             <li class="dropdown">
 				<a data-toggle="dropdown" href="#" id="themes"><i class="icon-th-list icon-white"> </i> Referensi <span class="caret"></span></a>
 				<ul class="dropdown-menu" aria-labelledby="themes">
-				<li><a tabindex="-1" href="<?php echo base_url(); ?>admin/klas_surat">Kode Bagian</a></li>
+				<li><a tabindex="-1" href="<?php echo base_url(); ?>admin/bagian">Kode Bagian</a></li>
 				</ul>
             </li>
 		<?php
@@ -115,7 +115,7 @@
 		<li class="dropdown">
               <a data-toggle="dropdown" href="#" id="themes"><i class="icon-random icon-white"> </i> Input Data <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/surat_masuk">User Baru</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/insert_user">User Baru</a></li>
                 <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/surat_keluar">Surat Keluar</a></li> -->
               </ul>
             </li>
@@ -123,7 +123,7 @@
 			<li class="dropdown">
               <a data-toggle="dropdown" href="#" id="themes"><i class="icon-file icon-white"> </i> Daftar User <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/agenda_surat_masuk"> User Baru</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/user_baru"> User Baru</a></li>
                 <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/agenda_surat_keluar"> Surat Keluar</a></li> -->
               </ul>
             </li>

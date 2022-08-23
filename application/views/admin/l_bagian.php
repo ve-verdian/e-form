@@ -7,12 +7,12 @@
 		if ($this->session->userdata('admin_level') == "Super Admin") {
 		?>
 		<div class="col-md-2">
-			<a href="<?php echo base_URL(); ?>admin/klas_surat/add" class="btn btn-info"><i class="icon-plus-sign icon-white"> </i> Tambah Data</a>
+			<a href="<?php echo base_URL(); ?>admin/bagian/add" class="btn btn-info"><i class="icon-plus-sign icon-white"> </i> Tambah Data</a>
 		</div>
 		<?php } ?>
 		<div class="col-md-3"></div>
 		<div class="col-md-4">
-			<form class="navbar-form navbar-left" method="post" action="<?php echo base_URL(); ?>admin/klas_surat/cari" style="margin-top: 0px">
+			<form class="navbar-form navbar-left" method="post" action="<?php echo base_URL(); ?>admin/bagian/cari" style="margin-top: 0px">
 				<input type="text" class="form-control" name="q" style="width: 200px" placeholder="Kata kunci pencarian ..." required>
 				<button type="submit" class="btn btn-danger"><i class="icon-search icon-white"> </i> Cari</button>
 			</form>
@@ -51,8 +51,8 @@
 			?>
 			<td class="ctr">
 				<div class="btn-group">
-					<a href="<?php echo base_URL(); ?>admin/klas_surat/edt/<?php echo $b->id; ?>" class="btn btn-success btn-sm"><i class="icon-edit icon-white"> </i> Edit</a>
-					<a href="<?php echo base_URL()?>admin/klas_surat/del/<?php echo $b->id?>" class="btn btn-warning btn-sm" onclick="return confirm('Anda Yakin..?')">
+					<a href="<?php echo base_URL(); ?>admin/bagian/edt/<?php echo $b->id; ?>" class="btn btn-success btn-sm"><i class="icon-edit icon-white"> </i> Edit</a>
+					<a href="<?php echo base_URL()?>admin/bagian/del/<?php echo $b->id?>" class="btn btn-warning btn-sm" onclick="return confirm('Anda Yakin..?')">
 					<i class="icon-trash icon-white"> </i> Hapus</a>
 				</div>					
 			</td>

@@ -37,7 +37,7 @@ if ($mode == "edt" || $mode == "act_edt") {
 		<div class="panel-heading"><h3 style="margin-top: 5px">Input Data</h3></div>
 	</div>
 
-	<form action="<?php echo base_URL(); ?>admin/surat_masuk/<?php echo $act; ?>" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+	<form action="<?php echo base_URL(); ?>admin/insert_user/<?php echo $act; ?>" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 	
 	<input type="hidden" name="idp" value="<?php echo $idp; ?>">
 	
@@ -54,7 +54,7 @@ if ($mode == "edt" || $mode == "act_edt") {
 		</table>
 		<tr><td colspan="2">
 		<br><button type="submit" class="btn btn-primary"tabindex="11" ><i class="icon icon-ok icon-white"></i> Simpan</button>
-		<a href="<?php echo base_URL(); ?>admin/surat_masuk" class="btn btn-success" tabindex="12" ><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
+		<a href="<?php echo base_URL(); ?>admin/insert_user" class="btn btn-success" tabindex="12" ><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
 		</td></tr>
 	</div>
 	
