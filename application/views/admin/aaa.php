@@ -4,6 +4,8 @@
 	<title>.:: FORMULIR PENGAJUAN USER SIM-RS ::.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<style type="text/css">
 	@font-face {
 	  font-family: 'Cabin';
@@ -46,7 +48,7 @@
 			$( "#kode_surat" ).autocomplete({
 				source: function(request, response) {
 					$.ajax({ 
-						url: "<?php echo site_url('index.php/admin/get_klasifikasi'); ?>",
+						url: "<?php echo site_url('admin/get_klasifikasi'); ?>",
 						data: { kode: $("#kode_surat").val()},
 						dataType: "json",
 						type: "POST",
@@ -62,7 +64,7 @@
 			$( "#dari" ).autocomplete({
 				source: function(request, response) {
 					$.ajax({ 
-						url: "<?php echo site_url('index.php/admin/get_instansi_lain'); ?>",
+						url: "<?php echo site_url('admin/get_instansi_lain'); ?>",
 						data: { kode: $("#dari").val()},
 						dataType: "json",
 						type: "POST",
@@ -87,8 +89,8 @@
 	</script>
 	</head>
 	
-  <body style="">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+  <body>
+    <div class="navbar navbar-expand-lg bg-lightnavbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
          <!-- <span class="navbar-brand"><strong style="font-family: verdana;">ASAMURAT</strong></span> -->
@@ -100,29 +102,29 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">	
-			<li><a href="<?php echo base_url(); ?>index.php/admin"><i class="icon-home icon-white"> </i>Beranda</a></li>
+			<li><a href="<?php echo base_url(); ?>admin"> </i>Beranda</a></li>
             <li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-th-list icon-white"> </i> Referensi <span class="caret"></span></a>
+				<a data-toggle="dropdown" href="#" id="themes"><i class="icon-th-list icon-white"> </i> Referensi <span class="caret"></span></a>
 				<ul class="dropdown-menu" aria-labelledby="themes">
-				<li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/klas_surat">Kode Bagian</a></li>
+				<li><a tabindex="-1" href="<?php echo base_url(); ?>admin/klas_surat">Kode Bagian</a></li>
 				</ul>
             </li>
 		<?php
 		if ($this->session->userdata('admin_level') != "Super Admin") {
 		?>	
 		<li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-random icon-white"> </i> Input Data <span class="caret"></span></a>
+              <a data-toggle="dropdown" href="#" id="themes"><i class="icon-random icon-white"> </i> Input Data <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/surat_masuk">User Baru</a></li>
-                <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/surat_keluar">Surat Keluar</a></li> -->
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/surat_masuk">User Baru</a></li>
+                <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/surat_keluar">Surat Keluar</a></li> -->
               </ul>
             </li>
             	<?php } ?>
 			<li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-file icon-white"> </i> Daftar User <span class="caret"></span></a>
+              <a data-toggle="dropdown" href="#" id="themes"><i class="icon-file icon-white"> </i> Daftar User <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/agenda_surat_masuk"> User Baru</a></li>
-                <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/agenda_surat_keluar"> Surat Keluar</a></li> -->
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/agenda_surat_masuk"> User Baru</a></li>
+                <!-- <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/agenda_surat_keluar"> Surat Keluar</a></li> -->
               </ul>
             </li>
 		
@@ -130,10 +132,10 @@
 			if ($this->session->userdata('admin_level') == "Super Admin") {
 			?>
 		<li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-wrench icon-white"> </i> Pengaturan <span class="caret"></span></a>
+              <a data-toggle="dropdown" href="#" id="themes"><i class="icon-wrench icon-white"> </i> Pengaturan <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/pengguna">Instansi Pengguna</a></li>
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/manage_admin">Manajemen Admin</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/pengguna">Instansi Pengguna</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/manage_admin">Manajemen Admin</a></li>
               </ul>
             </li>
 			<?php 
@@ -143,10 +145,10 @@
 
           <ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-user icon-white"></i> Administrator <span class="caret"></span></a>
+              <a data-toggle="dropdown" href="#" id="themes"><i class="icon-user icon-white"></i> Administrator <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/passwod">Ubah Password</a></li>
-                <li><a tabindex="-1" href="<?php echo base_url(); ?>index.php/admin/logout">Logout</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/passwod">Ubah Password</a></li>
+                <li><a tabindex="-1" href="<?php echo base_url(); ?>admin/logout">Logout</a></li>
                 <!-- <li><a tabindex="-1" href="http://nur-akhwan.blogspot.com/2013/10/aplikasi-sederhana-manajemen-surat.html" target="_blank">Help</a></li> -->
               </ul>
             </li>

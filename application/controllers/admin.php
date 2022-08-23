@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
 	
 	public function index() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 
 		$a['s_surat_masuk_bln'] = $this->db->query("SELECT 
@@ -41,7 +41,7 @@ class Admin extends CI_Controller {
 
 	public function klas_surat() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		/* pagination */	
@@ -54,7 +54,7 @@ class Admin extends CI_Controller {
 		//if (empty($awal) || $awal == 1) { $awal = 0; } { $awal = $awal; }
 		$akhir	= $per_page;
 		
-		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."index.php/admin/klas_surat/p");
+		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."admin/klas_surat/p");
 		
 		//ambil variabel URL
 		$mau_ke					= $this->uri->segment(3);
@@ -82,15 +82,15 @@ class Admin extends CI_Controller {
 		} else if ($mau_ke == "act_edt") {
 			$this->db->query("UPDATE ref_klasifikasi SET nama = '$nama', uraian = '$uraian' WHERE id = '$idp'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui</div>");			
-			redirect('index.php/admin/klas_surat');
+			redirect('admin/klas_surat');
 		} else if ($mau_ke == "act_add") {
 			$this->db->query("INSERT INTO ref_klasifikasi VALUES('','$kode', '$nama', '$uraian')");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan</div>");			
-			redirect('index.php/admin/klas_surat');
+			redirect('admin/klas_surat');
 		} else if ($mau_ke == "del") {
 			$this->db->query("DELETE FROM ref_klasifikasi WHERE id = '$idu'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil dihapus</div>");			
-			redirect('index.php/admin/klas_surat');
+			redirect('admin/klas_surat');
 		} else {
 			$a['data']		= $this->db->query("SELECT * FROM ref_klasifikasi ORDER BY id ASC LIMIT $awal, $akhir ")->result();
 			$a['page']		= "l_klas_surat";
@@ -101,7 +101,7 @@ class Admin extends CI_Controller {
 	
 	public function surat_masuk() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		$ta = $this->session->userdata('admin_ta');
@@ -116,7 +116,7 @@ class Admin extends CI_Controller {
 		//if (empty($awal) || $awal == 1) { $awal = 0; } { $awal = $awal; }
 		$akhir	= $per_page;
 		
-		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."index.php/admin/surat_masuk/p");
+		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."admin/surat_masuk/p");
 		
 		//ambil variabel URL
 		$mau_ke					= $this->uri->segment(3);
@@ -151,7 +151,7 @@ class Admin extends CI_Controller {
 		if ($mau_ke == "del") {
 			$this->db->query("DELETE FROM t_surat_masuk WHERE id = '$idu'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil dihapus</div>");
-			redirect('index.php/admin/surat_masuk');
+			redirect('admin/surat_masuk');
 		} else if ($mau_ke == "cari") {
 			$a['data']		= $this->db->query("SELECT * FROM t_surat_masuk WHERE isi_ringkas LIKE '%$cari%' OR indek_berkas LIKE '%$cari%' OR dari LIKE '%$cari%' OR no_surat LIKE '%$cari%' ORDER BY id DESC")->result();
 			$a['page']		= "l_surat_masuk";
@@ -175,7 +175,7 @@ class Admin extends CI_Controller {
 			}	
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan. </div>");
-			redirect('index.php/admin/surat_masuk');
+			redirect('admin/surat_masuk');
 		} else if ($mau_ke == "act_edt") {
 			if ($this->upload->do_upload('file_surat')) {
 				$up_data	 	= $this->upload->data();
@@ -186,7 +186,7 @@ class Admin extends CI_Controller {
 			}	
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui. </div>");			
-			redirect('index.php/admin/surat_masuk');
+			redirect('admin/surat_masuk');
 		} else {
 			$a['data']		= $this->db->query("SELECT * FROM t_surat_masuk WHERE YEAR(tgl_diterima) = '$ta' ORDER BY id DESC LIMIT $awal, $akhir ")->result();
 			$a['page']		= "l_surat_masuk";
@@ -197,7 +197,7 @@ class Admin extends CI_Controller {
 
 	public function surat_keluar() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		$ta = $this->session->userdata('admin_ta');
@@ -212,7 +212,7 @@ class Admin extends CI_Controller {
 		//if (empty($awal) || $awal == 1) { $awal = 0; } { $awal = $awal; }
 		$akhir	= $per_page;
 		
-		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."index.php/admin/surat_keluar/p");
+		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."admin/surat_keluar/p");
 		
 		//ambil variabel URL
 		$mau_ke					= $this->uri->segment(3);
@@ -245,7 +245,7 @@ class Admin extends CI_Controller {
 		if ($mau_ke == "del") {
 			$this->db->query("DELETE FROM t_surat_keluar WHERE id = '$idu'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil dihapus</div>");
-			redirect('index.php/admin/surat_keluar');
+			redirect('admin/surat_keluar');
 		} else if ($mau_ke == "cari") {
 			$a['data']		= $this->db->query("SELECT * FROM t_surat_keluar WHERE isi_ringkas LIKE '%$cari%' OR tujuan LIKE '%$cari%' OR no_surat LIKE '%$cari%' ORDER BY id DESC")->result();
 			$a['page']		= "l_surat_keluar";
@@ -269,7 +269,7 @@ class Admin extends CI_Controller {
 			}		
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan</div>");
-			redirect('index.php/admin/surat_keluar');
+			redirect('admin/surat_keluar');
 		} else if ($mau_ke == "act_edt") {
 			if ($this->upload->do_upload('file_surat')) {
 				$up_data	 	= $this->upload->data();
@@ -280,7 +280,7 @@ class Admin extends CI_Controller {
 			}	
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui ".$this->upload->display_errors()."</div>");			
-			redirect('index.php/admin/surat_keluar');
+			redirect('admin/surat_keluar');
 		} else {
 			$a['data']		= $this->db->query("SELECT * FROM t_surat_keluar WHERE YEAR(tgl_catat) = '$ta' ORDER BY id DESC LIMIT $awal, $akhir ")->result();
 			$a['page']		= "l_surat_keluar";
@@ -291,7 +291,7 @@ class Admin extends CI_Controller {
 
 	public function surat_disposisi() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		
@@ -330,7 +330,7 @@ class Admin extends CI_Controller {
 		if ($mau_ke == "del") {
 			$this->db->query("DELETE FROM t_disposisi WHERE id = '$idu2'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil dihapus</div>");
-			redirect('index.php/admin/surat_disposisi/'.$idu1);
+			redirect('admin/surat_disposisi/'.$idu1);
 		} else if ($mau_ke == "add") {
 			$a['page']		= "f_surat_disposisi";
 		} else if ($mau_ke == "edt") {
@@ -340,7 +340,7 @@ class Admin extends CI_Controller {
 			$this->db->query("INSERT INTO t_disposisi VALUES (NULL, '$id_surat', '$kpd_yth', '$isi_disposisi', '$sifat', '$batas_waktu', '$catatan')");
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan</div>");
-			redirect('index.php/admin/surat_disposisi/'.$id_surat);
+			redirect('admin/surat_disposisi/'.$id_surat);
 		} else if ($mau_ke == "act_edt") {
 			$this->db->query("UPDATE t_disposisi SET kpd_yth = '$kpd_yth', isi_disposisi = '$isi_disposisi', sifat = '$sifat', batas_waktu = '$batas_waktu', catatan = '$catatan' WHERE id = '$idp'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diperbaharui</div>");			
@@ -355,7 +355,7 @@ class Admin extends CI_Controller {
 	
 	public function pengguna() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}		
 		
 		//ambil variabel URL
@@ -429,7 +429,7 @@ class Admin extends CI_Controller {
 	
 	public function manage_admin() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		/* pagination */	
@@ -442,7 +442,7 @@ class Admin extends CI_Controller {
 		//if (empty($awal) || $awal == 1) { $awal = 0; } { $awal = $awal; }
 		$akhir	= $per_page;
 		
-		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."index.php/admin/manage_admin/p");
+		$a['pagi']	= _page($total_row, $per_page, 4, base_url()."admin/manage_admin/p");
 		
 		//ambil variabel URL
 		$mau_ke					= $this->uri->segment(3);
@@ -466,7 +466,7 @@ class Admin extends CI_Controller {
 		if ($mau_ke == "del") {
 			$this->db->query("DELETE FROM t_admin WHERE id = '$idu'");
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil dihapus</div>");
-			redirect('index.php/admin/manage_admin');
+			redirect('admin/manage_admin');
 		} else if ($mau_ke == "cari") {
 			$a['data']		= $this->db->query("SELECT * FROM t_admin WHERE nama LIKE '%$cari%' ORDER BY id DESC")->result();
 			$a['page']		= "l_manage_admin";
@@ -478,7 +478,7 @@ class Admin extends CI_Controller {
 		} else if ($mau_ke == "del") {
 			$a['datpil']	= $this->db->query("DELETE FROM t_admin WHERE id = '$idu'")->row();	
 			
-			redirect('index.php/admin/manage_admin');
+			redirect('admin/manage_admin');
 		} else if ($mau_ke == "act_add") {	
 			$cek_user_exist = $this->db->query("SELECT username FROM t_admin WHERE username = '$username'")->num_rows();
 
@@ -495,7 +495,7 @@ class Admin extends CI_Controller {
 				$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan</div>");
 			}
 			
-			redirect('index.php/admin/manage_admin');
+			redirect('admin/manage_admin');
 		} else if ($mau_ke == "act_edt") {
 			if (strlen($username) < 4) {
 				$this->session->set_flashdata("k", "<div class=\"alert alert-danger\" id=\"alert\">Username minimal 4 huruf</div>");
@@ -516,7 +516,7 @@ class Admin extends CI_Controller {
 				$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil ditambahkan</div>");
 			}
 			
-			redirect('index.php/admin/manage_admin');
+			redirect('admin/manage_admin');
 		} else {
 			$a['data']		= $this->db->query("SELECT * FROM t_admin LIMIT $awal, $akhir ")->result();
 			$a['page']		= "l_manage_admin";
@@ -564,7 +564,7 @@ class Admin extends CI_Controller {
 	
 	public function passwod() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
-			redirect("index.php/admin/login");
+			redirect("admin/login");
 		}
 		
 		$ke				= $this->uri->segment(3);
@@ -581,14 +581,14 @@ class Admin extends CI_Controller {
 			
 			if ($cek_password_lama->password != $p1) {
 				$this->session->set_flashdata('k_passwod', '<div id="alert" class="alert alert-error">Password Lama tidak sama</div>');
-				redirect('index.php/admin/passwod');
+				redirect('admin/passwod');
 			} else if ($p2 != $p3) {
 				$this->session->set_flashdata('k_passwod', '<div id="alert" class="alert alert-error">Password Baru 1 dan 2 tidak cocok</div>');
-				redirect('index.php/admin/passwod');
+				redirect('admin/passwod');
 			} else {
 				$this->db->query("UPDATE t_admin SET password = '$p3' WHERE id = ".$id_user."");
 				$this->session->set_flashdata('k_passwod', '<div id="alert" class="alert alert-success">Password berhasil diperbaharui</div>');
-				redirect('index.php/admin/passwod');
+				redirect('admin/passwod');
 			}
 		} else {
 			$a['page']	= "f_passwod";
@@ -625,15 +625,15 @@ class Admin extends CI_Controller {
 					'admin_valid' => true
                     );
             $this->session->set_userdata($data);
-            redirect('index.php/admin');
+            redirect('admin');
         } else {	
 			$this->session->set_flashdata("k", "<div id=\"alert\" class=\"alert alert-error\">username dan password tidak valid</div>");
-			redirect('index.php/admin/login');
+			redirect('admin/login');
 		}
 	}
 	
 	public function logout(){
         $this->session->sess_destroy();
-		redirect('index.php/admin/login');
+		redirect('admin/login');
     }
 }

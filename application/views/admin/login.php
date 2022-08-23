@@ -38,7 +38,7 @@
     <script src="<?php echo base_url(); ?>aset/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>aset/js/bootswatch.js"></script>
     <script src="<?php echo base_url(); ?>aset/js/jquery.chained.js"></script>
-  <body style="">
+  <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -72,7 +72,7 @@
 		</div>
 		
 		<div class="well" style="width: 400px; margin: 20px auto; border: solid 1px #d9d9d9; padding: 30px 20px; border-radius: 8px">
-		<form action="<?php echo base_URL(); ?>index.php/admin/do_login" method="post">
+		<form action="<?php echo base_URL(); ?>admin/do_login" method="post">
 		<legend>Login Admin</legend>	
 		<?php echo $this->session->flashdata("k"); ?>
 		<table align="center" style="margin-bottom: 0" class="table-form" width="90%">

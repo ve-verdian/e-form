@@ -2,113 +2,15 @@
 	<div class="panel-heading"><h3 style="margin-top: 5px">Dashboard</h3></div>
 </div>
 
-<div class="panel panel-success">
-	<div class="panel-heading">Statistik Tahun <?php echo $this->session->userdata('admin_ta'); ?></div>
-	<div class="panel-body">
-		<div class="col-md-4">
-			<b>Statistik User Baru Berdasarkan Periode Bulan</b>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Bulan</th>
-						<th>Jumlah</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php 
-					$jml = 0;
-					if (!empty($s_surat_masuk_bln)) {
-						foreach ($s_surat_masuk_bln as $smb) {
-							echo '<tr><td><center>'.$smb['bln'].'</center></td><td><center>'.$smb['jml'].'</center></td></tr>';
-							$jml += $smb['jml'];
-						}
-					} else {
-						echo '<tr><td colspan="2">tidak ada data</td></tr>';
-					}
-					?>
-					<tr>
-						<td><center>Jumlah Total</center></td>
-						<td><center><?php echo $jml; ?></center></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<!-- <div class="col-md-6">
-			<b>Statistik Surat Keluar Berdasarkan Bulan</b>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Bulan</th>
-						<th>Jumlah</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php 
-					$jml2 = 0;
-					if (!empty($s_surat_keluar_bln)) {
-						foreach ($s_surat_keluar_bln as $skb) {
-							echo '<tr><td>'.$skb['bln'].'</td><td>'.$skb['jml'].'</td></tr>';
-							$jml2 += $skb['jml'];
-						}
-					} else {
-						echo '<tr><td colspan="2">tidak ada data</td></tr>';
-					}
-					?>
-					<tr>
-						<td>Jumlah Total</td>
-						<td><?php echo $jml2; ?></td>
-					</tr>
-				</tbody>
-			</table>
-		</div> -->
-		
-		<div class="clearfix"></div>
-
-		<div class="col-md-4">
-			<b>Statistik User Baru Berdasarkan Bagian</b>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Nama Bagian</th>
-						<th>Keterangan</th>
-						<th>Jumlah</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php 
-					if (!empty($s_surat_masuk_kode)) {
-						foreach ($s_surat_masuk_kode as $smk) {
-							echo '<tr><td>'.$smk['kode'].'</td><td>'.$smk['nama'].'</td><td><center>'.$smk['jml'].'</center></td></tr>';
-						}
-					} else {
-						echo '<tr><td colspan="2">tidak ada data</td></tr>';
-					}
-					?>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- <div class="col-md-6">
-			<b>Statistik Surat Keluar Berdasarkan Kode</b>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Kode</th>
-						<th>Jumlah</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php 
-					if (!empty($s_surat_keluar_kode)) {
-						foreach ($s_surat_keluar_kode as $skk) {
-							echo '<tr><td>'.$skk['kode'].'</td><td>'.$skk['jml'].'</td></tr>';
-						}
-					} else {
-						echo '<tr><td colspan="2">tidak ada data</td></tr>';
-					}
-					?>
-				</tbody>
-			</table>
-		</div> -->
-	</div>
+<div class="card">
+  <div class="card-header">
+    <b>  
+    Selamat Datang  
+    </b>  
+  </div>
+    <div class="card-body">
+    <!-- <h5 class="card-title">Special title treatment</h5> -->
+      <p class="card-text">Rumah Sakit Ibu dan Anak Family telah berdiri sejak tahun 2002 menyediakan fasilitas pelayanan kesehatan komprehensif kepada Ibu dan Anak yang terus berevolusi dan mengembangkan pelayanan kesehatan sehingga menjadi pilihan utama bagi keluarga di daerah Jakarta Utara dan sekitarnya.
+Sejalan dengan visi & misi kami, RSIA Family berkomitmen untuk senantiasa melakukan perubahan menuju perbaikan (continuous improvement) dalam memberikan pelayanan yang optimal dan terjangkau bagi seluruh lapisan masyarakat.</p>
+    </div>
 </div>

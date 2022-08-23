@@ -2,7 +2,7 @@
 	<div class="panel-heading"><h3 style="margin-top: 5px">Instansi Pengguna</h3></div>
 </div>
 	
-	<form action="<?php echo base_URL(); ?>index.php/admin/pengguna/act_edt" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+	<form action="<?php echo base_URL(); ?>admin/pengguna/act_edt" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 		
 	<input type="hidden" name="idp" value="<?php echo $data->id; ?>">
 	<div class="row-fluid well" style="overflow: hidden">
@@ -14,7 +14,7 @@
 		<tr><td width="20%">Telp</td><td><b><input type="text" name="telp" required value="<?php echo $data->telp; ?>" style="width: 200px" class="form-control"></b></td></tr>	
 		<tr><td colspan="2">
 		<br><button type="submit" class="btn btn-primary"><i class="icon icon-ok icon-white"></i> Simpan</button>
-		<a href="<?php echo base_URL(); ?>index.php/admin" class="btn btn-success"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
+		<a href="<?php echo base_URL(); ?>admin" class="btn btn-success"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
 		</td></tr>
 		</table>
 	</div>

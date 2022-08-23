@@ -4,11 +4,11 @@
 	<div class="panel-heading" style="overflow: auto">
 		<div class="col-md-2"><h3 style="margin-top: 5px">Surat Keluar</h3></div>
 		<div class="col-md-2">
-			<a href="<?php echo base_URL(); ?>index.php/admin/surat_keluar/add" class="btn btn-info"><i class="icon-plus-sign icon-white"> </i> Tambah Data</a>
+			<a href="<?php echo base_URL(); ?>admin/surat_keluar/add" class="btn btn-info"><i class="icon-plus-sign icon-white"> </i> Tambah Data</a>
 		</div>
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<form class="navbar-form navbar-left" method="post" action="<?php echo base_URL(); ?>index.php/admin/surat_keluar/cari" style="margin-top: 0px">
+			<form class="navbar-form navbar-left" method="post" action="<?php echo base_URL(); ?>admin/surat_keluar/cari" style="margin-top: 0px">
 				<input type="text" class="form-control" name="q" style="width: 200px" placeholder="Kata kunci pencarian ..." required>
 				<button type="submit" class="btn btn-danger"><i class="icon-search icon-white"> </i> Cari</button>
 			</form>
@@ -48,8 +48,8 @@
 				if ($b->pengolah == $this->session->userdata('admin_id')) {
 				?>
 				<div class="btn-group">
-					<a href="<?php echo base_URL()?>index.php/admin/surat_keluar/edt/<?php echo $b->id?>" class="btn btn-success btn-sm"><i class="icon-edit icon-white"> </i> Edit</a>
-					<a href="<?php echo base_URL()?>index.php/admin/surat_keluar/del/<?php echo $b->id?>" class="btn btn-warning btn-sm" onclick="return confirm('Anda Yakin..?')">
+					<a href="<?php echo base_URL()?>admin/surat_keluar/edt/<?php echo $b->id?>" class="btn btn-success btn-sm"><i class="icon-edit icon-white"> </i> Edit</a>
+					<a href="<?php echo base_URL()?>admin/surat_keluar/del/<?php echo $b->id?>" class="btn btn-warning btn-sm" onclick="return confirm('Anda Yakin..?')">
 					<i class="icon-trash icon-white"> </i> Hapus</a>
 				</div>	
 				<?php } else { ?>
