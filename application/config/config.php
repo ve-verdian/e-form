@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$config['base_url']	      = "http://".$_SERVER['SERVER_NAME']."/user/";
+$config['base_url']	      = "http://".$_SERVER['SERVER_NAME']."/pengajuan/";
 $config['index_page']     = '';
 $config['uri_protocol']	  = 'AUTO';
 
