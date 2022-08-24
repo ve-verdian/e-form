@@ -24,7 +24,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 
 <body onload="window.print()">
 <table>
-	<tr><td colspan="3" ><img src="http://192.168.100.66/user/upload/RSIA_Family1.jpg" style="width:155px;height:90px;" align="left">
+	<tr><td colspan="3" ><img src="http://192.168.100.66/e-form/aset/img/fam.png" style="width:155px;height:90px;" align="left">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $q_instansi->alamat; ?>
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $q_instansi->telp; ?></p>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $q_instansi->fax; ?>	
