@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$config['base_url']	      = "http://".$_SERVER['SERVER_NAME']."/pengajuan/";
+$config['base_url']	      = "http://".$_SERVER['SERVER_NAME']."/e-form/";
 $config['index_page']     = '';
 $config['uri_protocol']	  = 'AUTO';
 
