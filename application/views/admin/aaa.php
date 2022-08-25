@@ -90,7 +90,7 @@
 	</head>
 	
   <body>
-    <div class="navbar navbar-expand-lg bg-lightnavbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-expand-lg bg-danger navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
          <!-- <span class="navbar-brand"><strong style="font-family: verdana;">ASAMURAT</strong></span> -->

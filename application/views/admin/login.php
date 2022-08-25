@@ -39,7 +39,7 @@
     <script src="<?php echo base_url(); ?>aset/js/bootswatch.js"></script>
     <script src="<?php echo base_url(); ?>aset/js/jquery.chained.js"></script>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-expand-lg bg-danger navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <span class="navbar-brand"><strong style="font-family: verdana; margin-left: 380px; text-align: center">FORMULIR PENGAJUAN USER SIM-RS</strong></span>
@@ -90,7 +90,7 @@
 			?>
 			</select>
 			</td></tr>
-			<tr><td></td><td><input type="submit" class="btn btn-success" value="Login"></td></tr>
+			<tr><td></td><td><input type="submit" class="btn btn-danger" value="Login"></td></tr>
 		</table>
 		<!-- <center style="font-size: 11px">Username : <b>admin</b>, Password : <b>admin</b></center> -->
 		</form>
@@ -98,7 +98,7 @@
       </div><!--/row-->
 
     </div><!--/.fluid-container-->
-	<center style="margin-top: -15px;">Versi 1.0 (2022) &copy; <a href="#">Unknown</a>
+	<center style="margin-top: -15px;">Versi 1.0 (2022) &copy; <a href="#">e-form</a>
 	<!-- <a href="http://nur-akhwan.blogspot.com/">Blog Nur Akhwan</a><br> -->
 	<!-- <span style="color: red">*) Jangan dihilangkan copyright-nya ya, kecuali untuk tugas kuliah... hehe :)</span> -->
 	</center>
@@ -107,9 +107,9 @@
 	$(document).ready(function(){
 		$(" #alert" ).fadeOut(6000);
 	});
-	</script>
-	  
+	</script>  
+	
     </div>
-  
-</body></html>
+</body>
+</html>
 

@@ -53,7 +53,7 @@ if ($mode == "edt" || $mode == "act_edt") {
 		<tr><td width="20%">Jabatan</td><td><b><input type="text" name="uraian"  tabindex="5" required value="<?php echo $uraian; ?>" id="uraian" style="width: 150px" class="form-control"></b></td></tr> 
 		</table>
 		<tr><td colspan="2">
-		<br><button type="submit" class="btn btn-primary"tabindex="11" ><i class="icon icon-ok icon-white"></i> Simpan</button>
+		<br><button type="submit" class="btn btn-primary" tabindex="11" ><i class="icon icon-ok icon-white"></i> Simpan</button>
 		<a href="<?php echo base_URL(); ?>admin/insert_user" class="btn btn-success" tabindex="12" ><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
 		</td></tr>
 	</div>
