@@ -127,13 +127,13 @@ class Admin extends CI_Controller {
 		//ambil variabel post
 		$idp					= addslashes($this->input->post('idp'));
 		$no_agenda				= addslashes($this->input->post('no_agenda'));		// No. Registrasi
-		$indek_berkas			= addslashes($this->input->post('indek_berkas'));	// Email
+		// $indek_berkas			= addslashes($this->input->post('indek_berkas'));	// Email
 		$kode					= addslashes($this->input->post('kode'));			// Kode bagian
 		$dari					= addslashes($this->input->post('dari'));			// Nama Pegawai
 		$no_surat				= addslashes($this->input->post('no_surat'));		// N I P
 		$tgl_surat				= addslashes($this->input->post('tgl_surat'));		// Tanggal Input
 		$uraian					= addslashes($this->input->post('uraian'));			// Jabatan
-		$ket					= addslashes($this->input->post('ket'));			// User Login SIM-RS
+		// $ket					= addslashes($this->input->post('ket'));			// User Login SIM-RS
 		$nomor_hp				= addslashes($this->input->post('nomor_hp'));
 		$akses_menu				= addslashes($this->input->post('akses_menu'));
 		
