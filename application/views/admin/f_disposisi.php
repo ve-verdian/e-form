@@ -40,15 +40,15 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	<tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BAGIAN / DEPT / UNIT <td width="10%">:</b> <?php echo $datpil1->kode; ?></td></tr>
 	<tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JABATAN / POSISI <td width="10%">:</b> <?php echo $datpil1->isi_ringkas; ?></td></tr>
 	<!-- <tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POSISI <td width="10%">:</b> <?php echo $datpil1->indek_berkas; ?></td></tr> -->
-	<tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKASI <td width="10%">:</b><input class="form-check-input" type="checkbox" id="Ya" value="">
-		<label class="form-check-label" for="Ya"><b>RSIA FAMILY</label>
+	<tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOKASI <td width="10%">: </b><input class="form-check-input" type="checkbox" id="Ya" value="">
+		<label class="form-check-label" for="Ya"><b>RSIA FAMILY</label>&nbsp;
 		<input class="form-check-input" type="checkbox" id="family" value="">
 		<label class="form-check-label" for="grand"><b>RSIA GRAND FAMILY</label></td></tr>
 	<!-- <tr><td colspan="3" align="left"><b style="font-size: 14px;">II. RINCIAN KEJADIAN</b></td></tr>
 	<tr><td><b>N I P <td width="10%">:</b> <?php echo $datpil1->no_surat; ?></td></tr> -->	
 	<!-- <tr><td><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jabatan <td width="10%">:</b> <?php echo $datpil1->isi_ringkas; ?></td></tr> -->
-	<tr><td colspan="3" style="line-height: 30px"><p align="justify">Selanjutnya disebut sebagai <b><i>USER,</i></b> dengan ini ingin diberikan : </p>
-	<tr><td colspan="3" style="line-height: 30px"><p align="justify"><b><i>User Account :</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<tr><td colspan="3" style="line-height: 20px"><p align="justify">Selanjutnya disebut sebagai <b><i>USER,</i></b> dengan ini ingin diberikan : </p>
+	<tr><td colspan="3" style="line-height: 20px"><p align="justify"><b><i>User Account :</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 		<input class="form-check-input" type="checkbox" id="Ya" value="">
 		<label class="form-check-label" for="Ya"><b>SIMRS</label>&nbsp;&nbsp;&nbsp;
 		<input class="form-check-input" type="checkbox" id="simrs" value="">
@@ -63,11 +63,11 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="form-check-input" type="checkbox" id="lainnya" value="">
 		<label class="form-check-label" for="grand"><b>LAINNYA ...</label>
 		</td></tr>
-		<tr><td colspan="3" style="line-height: 30px"><p align="justify">Pada Sistem Informasi Manajemen Rumah Sakit (SIMRS) untuk menjalankan pekerjaan sesuai dengan tanggung jawab yang diberikan. Adapun tanggung jawab yang diberikan adalah sebagai berikut :</p>
+		<tr><td colspan="3" style="line-height: 20px"><p align="justify">Pada Sistem Informasi Manajemen Rumah Sakit (SIMRS) untuk menjalankan pekerjaan sesuai dengan tanggung jawab yang diberikan. Adapun tanggung jawab yang diberikan adalah sebagai berikut :</p>
 		<center><b><?php echo $datpil1->akses_menu; ?></b></center>
 		</td>
 		</tr>
-		<td colspan="3" style="line-height: 30px"><p align="justify">Maka dengan ini ingin meminta persetujuan oleh Direktur Rumah Sakit untuk diberikan 
+		<td colspan="3" style="line-height: 20px"><p align="justify">Maka dengan ini ingin meminta persetujuan oleh Direktur Rumah Sakit untuk diberikan 
 			Akses Account untuk menyelesaikan Perkerjaan dan Tanggung Jawab yang diberikan.
 			Petugas terkait akan membantu melakukan proses Penambahan User dengan Persetujuan Direktur Rumah Sakit.</p>
 		</td>
@@ -81,9 +81,9 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 		(_____________________)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<i>Nama Lengkap & TTD
 	</td>
-	<td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 Mengetahui<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atasan Langsung,<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 (_____________________)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 Mengetahui<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atasan Langsung,<br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 (_____________________)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<i>Nama Lengkap & TTD
 	</td>
 	</tr>
