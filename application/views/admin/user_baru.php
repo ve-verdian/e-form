@@ -50,8 +50,8 @@
 				<th width="8%"><center>N I P</center></td>
 				<th width="12%"><center>Bagian</center></td>
 				<th width="8%"><center>Jabatan</center></td>
-				<th width="10%"><center>Email</center></td>
-				<th width="10%"><center>User Login</center></td>
+				<!-- <th width="10%"><center>Email</center></td>
+				<th width="10%"><center>User Login</center></td> -->
 				<th width="10%"><center>Tgl Input</center></td>
 				<th width="10%"><center>Verifikasi</center></td>
 				
@@ -70,8 +70,8 @@
 				<td width="8%"><center><?php echo $d->no_surat; // N I P ?></center></td>
 				<td width="12%"><center><?php echo $d->kode; // Bagian ?></center></td>
 				<td width="8%"><center><?php echo $d->isi_ringkas; // Jabatan ?></center></td>
-				<td width="10%"><center><?php echo $d->indek_berkas; // Email ?> </center></td>	
-				<td width="10%"><center><?php echo $d->keterangan; // User Login SIM-RS ?></center></td>
+				<!-- <td width="10%"><center><?php echo $d->indek_berkas; // Email ?> </center></td>	
+				<td width="10%"><center><?php echo $d->keterangan; // User Login SIM-RS ?></center></td> -->
 				<td width="10%"><center><?php echo tgl_jam_sql($d->tgl_surat); // Tanggal Input ?></center></td>
 				<td width="10%"><center><?php echo gval("t_admin", "id", "nama", $d->pengolah); ?></center></td>
 			</tr>

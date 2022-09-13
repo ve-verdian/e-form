@@ -7,13 +7,13 @@ if ($mode == "edt" || $mode == "act_edt") {
 	$act		= "act_edt";
 	$idp		= $datpil->id;
 	$no_agenda	= $datpil->no_agenda; 		// No. Registrasi
-	$indek_berkas= $datpil->indek_berkas; 	// Email
+	// $indek_berkas= $datpil->indek_berkas; 	// Email
 	$kode		= $datpil->kode; 			// Bagian
 	$dari		= $datpil->dari; 			// Nama Pegawai
 	$no_surat	= $datpil->no_surat; 		// N I P
 	$tgl_surat	= $datpil->tgl_surat; 		// Tanggal Input
 	$uraian		= $datpil->isi_ringkas; 	// Jabatan
-	$ket		= $datpil->keterangan; 		// User Login SIM-RS
+	// $ket		= $datpil->keterangan; 		// User Login SIM-RS
 	$nomor_hp	= $datpil->nomor_hp;
 	$akses_menu = $datpil->akses_menu;
 
@@ -21,13 +21,13 @@ if ($mode == "edt" || $mode == "act_edt") {
 	$act		= "act_add";
 	$idp		= "";
 	$no_agenda	= $nomer_terakhir;
-	$indek_berkas="";
+	// $indek_berkas="";
 	$kode		= "";
 	$dari		= "";
 	$no_surat	= "";
 	$tgl_surat	= "";
 	$uraian		= "";
-	$ket		= "";
+	// $ket		= "";
 	$nomor_hp	= "";
 	$akses_menu = "";
 }
