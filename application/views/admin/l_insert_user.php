@@ -25,7 +25,7 @@
 			<th width="27%">Nama Pegawai, NIP</th>
 			<th width="20%">Bagian, Jabatan</th>
 			<!-- <th width="15%">Email, User Login</th> -->
-			<th width="15%">Tgl Input</th>
+			<th width="15%">Tanggal Input</th>
 			<th width="23%">Aksi</th>
 		</tr>
 	</thead>
@@ -42,11 +42,11 @@
 				if ($b->pengolah == $this->session->userdata('admin_id')) {
 				?>
 		<tr>
-			<td><?php echo $b->no_agenda;?></td>
+			<td><center><?php echo $b->no_agenda;?></td>
 			<td><?php echo $b->dari. "<br><i>".$b->no_surat; ?></td>
 			<td><?php echo $b->kode. "<br><i>" .$b->isi_ringkas; ?></td>
 			<!-- <td><?php echo $b->indek_berkas. "<br><i>".$b->keterangan; ?></td> -->
-			<td><?php echo tgl_jam_sql($b->tgl_surat); ?></td>
+			<td><center><?php echo tgl_jam_sql($b->tgl_surat); ?></td>
 			
 			<td class="ctr">
 				<div class="btn-group; justify">

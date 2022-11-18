@@ -1,0 +1,2 @@
+1. XAMPP for Windows 7.2.9
+2. CodeIginter version 2.1.2
